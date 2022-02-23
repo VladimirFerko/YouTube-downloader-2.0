@@ -2,8 +2,6 @@ from pytube import YouTube
 import os
 
 
-
-
 if __name__ == '__main__':
 
     # continuing variable
@@ -15,7 +13,10 @@ if __name__ == '__main__':
     # getting an input from user (youtube link)
     while continue_var == 'Y':  
         song_link = input('Insert a link here: ')
-        YouTube(song_link)
+        try: 
+            YouTube(song_link)
+        except: 
+            print('Not a valid link..') 
 
 
         # asking if user want to continue in the loop
